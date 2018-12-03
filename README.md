@@ -25,7 +25,7 @@ Notes:
 
 ## User Story
 
-A user needs to first loging, or register. Registration requires an email, username, password. Once logged in, they are taken to a New Grocery List page. 
+A user needs to first log in, or register. Registration requires an email, username, password. Once logged in, they are taken to a New Grocery List page. 
 This page contains:
 Grocery list - unfinished, requires user input
 Added Recipes - unfinished, requires user input
@@ -41,9 +41,12 @@ User completes list by hitting complete button (email or pdf or both is taken ca
 ### Technology
 
 Front End: React.js | Bootstrap4
-Back End: Nodejs | Django | Sequelize (ORM)
+Back End: Nodejs | express | Sequelize (ORM) (sanitizes and translates data for you)
 Database: Postgresql 
 API: spoonacular 
+
+Other frameworks: 
+Flask - written with python
 
 ## Wireframes
 
@@ -51,3 +54,7 @@ API: spoonacular
 ![homepage](./imgs/homepage.png)
 ![action](./imgs/action.png)
 ![profile](./imgs/profile.png)
+
+## Data Models
+https://docs.google.com/spreadsheets/d/12K1l97x7fLH3XVBiPK5_I6km61obcIp9Kl06xj_TiYU/edit#gid=0
+
