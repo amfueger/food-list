@@ -5,15 +5,19 @@ class AddIngredient extends Component {
 	constructor(){
 		super();
 		this.state = {
-			ingredient: { 
+			ingredient: [{ 
 				amount: '',
 				measurement: '',
 				description: '',
-			}
+			}]
 		}
 	}
-
 	
+	updateIngredient = (e) => {
+		this.setState({
+			[e.currentTarget.name]: e.currentTarget.value
+		})
+	}
 	render() {
 		return(
 			<Form 
@@ -25,14 +29,16 @@ class AddIngredient extends Component {
 					type="amount" 
 					name="amount" 
 					placeholder="1oz, 1 cup, etc."
-					value={this.state.ingredient.amount}/>
+					value={this.state.ingredient.amount}
+					onChange={this.updateIngredient}/>
 				</FormGroup>
 				<FormGroup>
 					<Label>Measurement</Label>
 					<Input 
 					type="measurement" 
 					name="measurement"
-					value={this.state.ingredient.measurement}/>
+					value={this.state.ingredient.measurement}
+					onChange={this.updateIngredient}/>
 						<option>N/A</option>
 						<option>cup(s)</option>
 						<option>tsp</option>
@@ -48,7 +54,8 @@ class AddIngredient extends Component {
 					<Input 
 					type="ingredient" 
 					name="ingredient"
-					value={this.state.ingredient.ingredient}/>
+					value={this.state.ingredient.ingredient}
+					onChange={this.updateIngredient}/>
 				</FormGroup>
 				<Button 
 				color="blue" 
